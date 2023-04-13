@@ -69,3 +69,90 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.no-js {
+  .header__navigation {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: -15px;
+    margin-top: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    background-color: $color-alice-blue;
+    color: $color-tangaroa;
+  }
+
+  .logotype {
+    position: absolute;
+    z-index: 2;
+    color: $color-tangaroa;
+  }
+
+  .header__navigation-list {
+    display: block;
+    margin-left: auto;
+  }
+
+  .btn-toogle {
+    display: none;
+  }
+}
+
+.btn-toogle {
+  display: none;
+
+  @include vp-767 {
+    position: relative;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 24px;
+    height: 14px;
+    border-top: 2px solid $color-alice-blue;
+    border-bottom: 2px solid $color-alice-blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      right: 0;
+      border-top: 2px solid $color-alice-blue;
+    }
+
+    .is-open & {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      width: 16px;
+      height: 16px;
+      border: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2px;
+        width: 18px;
+        border: none;
+        background-color: $color-tangaroa;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2px;
+        width: 18px;
+        background-color: $color-tangaroa;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.booking {
+  position: relative;
+  min-height: 555px;
+  height: 100%;
+  padding: 50px 0;
+
+  @include vp-1023 {
+    padding: 88px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 58px 0 65px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    background-color: $color-nepal;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.booking__wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 60px 0 60px;
+
+  @include vp-1023 {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.booking__inner {
+  margin-right: 20px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0;
+    margin-bottom: 8px;
+
+    @include vp-1023 {
+      font-size: 34px;
+      line-height: 51px;
+      margin-bottom: 6px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0 15px 10px;
+    }
+
+    br:first-child {
+      display: none;
+    }
+
+    @include vp-767 {
+      br:first-child {
+        display: block;
+      }
+
+      br:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+.booking__form {
+  margin-left: auto;
+  max-width: 404px;
+
+  @include vp-1023 {
+    max-width: 72.4%;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+
+  p {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 27px;
+    color: $color-alice-blue;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-767 {
+      text-align: center;
+      line-height: 25px;
+      margin: 0 8px 30px;
+    }
+  }
+
+  @include vp-1023 {
+    margin: 40px auto 0;
+  }
+
+  @include vp-767 {
+    margin: 24px auto 0;
+  }
+}

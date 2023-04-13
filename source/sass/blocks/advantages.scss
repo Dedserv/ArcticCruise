@@ -1,0 +1,166 @@
+.advantages {
+  position: relative;
+  min-height: 562px;
+  height: 100%;
+  padding: 110px 0 120px;
+
+  @include vp-1023 {
+    padding: 90px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 56px 0 68px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    background-color: $color-nepal;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.advantages__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 49px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.advantages__card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+
+  @include vp-1023 {
+    grid-gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__card {
+  background-color: $color-alice-blue;
+  padding: 30px 30px 44px;
+
+  br {
+    display: none;
+  }
+
+  &:first-child {
+    p {
+      max-width: 100%;
+    }
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+
+  @include vp-1023 {
+    padding: 26px 16px 20px 20px;
+
+    br {
+      display: block;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 25px 15px 20px 20px;
+    margin-right: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    br {
+      display: none;
+    }
+
+    @include vp-1023 {
+      br {
+        display: block;
+      }
+      line-height: 25px;
+    }
+
+    @include vp-767 {
+    }
+  }
+
+  p {
+    max-width: 94%;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.advantages__icon {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.advantages__icon--liner {
+  @include vp-1023 {
+    width: 21px;
+    height: 26px;
+  }
+}
+
+.advantages__icon--apply {
+  @include vp-1023 {
+    width: 27px;
+    height: 26px;
+  }
+}
+
+.advantages__icon--boat {
+  @include vp-1023 {
+    width: 36px;
+    height: 26px;
+  }
+}
