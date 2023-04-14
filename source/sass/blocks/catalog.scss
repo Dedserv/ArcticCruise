@@ -41,7 +41,7 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 23%));
   grid-auto-flow: dense;
   grid-gap: 30px;
-  margin: 0 15px;
+  margin: 0 13px;
   justify-content: center;
 
   @include vp-1023 {
@@ -146,6 +146,7 @@
   }
 
   span {
+    display: block;
     font-weight: 500;
     font-size: 14px;
   }
@@ -157,10 +158,6 @@
     line-height: 20px;
     margin: 0;
     margin-bottom: 8px;
-  }
-
-  span {
-    display: block;
   }
 }
 

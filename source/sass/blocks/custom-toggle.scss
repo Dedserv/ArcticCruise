@@ -84,6 +84,7 @@
 
   input:checked + .custom-toggle__icon {
     outline: 1.5px solid $color-amazon;
+
     &::before {
       content: "";
       position: absolute;
