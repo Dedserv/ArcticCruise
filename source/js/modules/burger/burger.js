@@ -28,6 +28,7 @@ export class Burger {
     this._scrollLock.disableScrolling();
     document.addEventListener('keydown', this._onDocumentKeydown);
     document.addEventListener('click', this._onDocumentClick);
+    window.addEventListener('resize', () => this._windowSize());
     this._focusLock.lock('[data-header]');
     if (window.ls) {
       window.ls.stop();
@@ -41,6 +42,7 @@ export class Burger {
     this._focusLock.unlock('[data-header]');
     document.removeEventListener('keydown', this._onDocumentKeydown);
     document.removeEventListener('click', this._onDocumentClick);
+    window.removeEventListener('resize', this._windowSize);
     if (window.ls) {
       window.ls.start();
     }
@@ -62,6 +64,12 @@ export class Burger {
 
   _onDocumentClick(evt) {
     if (evt.target.hasAttribute('data-close-menu')) {
+      this._closeMenu();
+    }
+  }
+
+  _windowSize() {
+    if (window.innerWidth > 769) {
       this._closeMenu();
     }
   }
