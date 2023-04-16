@@ -26,6 +26,10 @@
       padding-left: 28px;
     }
 
+    .focus-visible + .custom-toggle__icon {
+      outline: 2px solid $color-nepal;
+    }
+
     span {
       display: block;
       text-align: start;

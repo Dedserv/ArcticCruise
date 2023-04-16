@@ -11,6 +11,7 @@
   margin-right: 33px;
   font-weight: 500;
   line-height: 20px;
+  transition: $trans-default opacity;
 
   @include hover-focus {
     opacity: 0.8;

@@ -62,6 +62,11 @@
   a {
     display: flex;
     align-items: center;
+    transition: $trans-default opacity;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   span {
