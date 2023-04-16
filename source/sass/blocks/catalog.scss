@@ -39,6 +39,7 @@
 .catalog__card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 23%));
+  grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   grid-gap: 30px;
   margin: 0 15px;
@@ -60,10 +61,14 @@
   justify-self: center;
   max-width: 440px;
   width: 100%;
+  height: 100%;
 
   @include hover-focus {
+    h3 {
+      opacity: 0;
+    }
+
     .catalog__card-inner {
-      display: flex;
       opacity: 1;
       background-color: $color-tangaroa;
     }
@@ -71,15 +76,21 @@
 
   &:focus-within {
     .catalog__card-inner {
-      display: flex;
       opacity: 1;
       background-color: $color-tangaroa;
     }
   }
 
   img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: $color-nepal;
     width: 100%;
+    height: 100%;
 
     @include vp-767 {
       max-width: 500px;
@@ -95,6 +106,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+    transition: $trans-default opacity;
 
     @include vp-1023 {
       margin: 0 35px 27px;
@@ -110,20 +122,18 @@
   display: flex;
   flex-direction: column;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 28px 25px 35px;
+  padding: 25px 25px 35px;
   transition: $trans-600 background-color, opacity 0.4s;
   width: 100%;
+  height: 100%;
 
   @include vp-1023 {
-    padding: 28px 35px 35px;
+    padding: 25px 35px 35px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 28px 25px 35px;
+    padding: 25px 25px 35px;
   }
 
   h3 {

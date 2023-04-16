@@ -1517,6 +1517,7 @@ button,
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 23%));
+  grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   grid-gap: 30px;
   margin: 0 15px;
@@ -1532,27 +1533,33 @@ button,
   justify-self: center;
   max-width: 440px;
   width: 100%;
+  height: 100%;
+}
+
+.catalog__card.focus-visible:focus h3 {
+  opacity: 0;
 }
 
 .catalog__card.focus-visible:focus .catalog__card-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   opacity: 1;
   background-color: #011c40;
 }
 
 .catalog__card:focus-within .catalog__card-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   opacity: 1;
   background-color: #011c40;
 }
 
 .catalog__card img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #93abbe;
   width: 100%;
+  height: 100%;
 }
 
 .catalog__card h3 {
@@ -1563,6 +1570,9 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+  -webkit-transition: 0.3s ease opacity;
+  -o-transition: 0.3s ease opacity;
+  transition: 0.3s ease opacity;
 }
 
 .catalog__card-inner {
@@ -1574,14 +1584,12 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 28px 25px 35px;
+  padding: 25px 25px 35px;
   -webkit-transition: 0.6s ease background-color, opacity 0.4s;
   -o-transition: 0.6s ease background-color, opacity 0.4s;
   transition: 0.6s ease background-color, opacity 0.4s;
   width: 100%;
+  height: 100%;
 }
 
 .catalog__card-inner h3 {
@@ -2087,7 +2095,7 @@ button,
   }
 
   .catalog__card-inner {
-    padding: 28px 35px 35px;
+    padding: 25px 35px 35px;
   }
 
   .catalog__card-inner h3 {
@@ -2464,7 +2472,7 @@ button,
 
   .catalog__card-inner {
     width: 100%;
-    padding: 28px 25px 35px;
+    padding: 25px 25px 35px;
   }
 
   .catalog__card-inner h3 {
@@ -2671,10 +2679,11 @@ button,
     opacity: 0.8;
   }
 
+  .catalog__card:hover:not(.focus-visible) h3 {
+    opacity: 0;
+  }
+
   .catalog__card:hover:not(.focus-visible) .catalog__card-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     opacity: 1;
     background-color: #011c40;
   }
