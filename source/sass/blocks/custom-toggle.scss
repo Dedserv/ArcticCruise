@@ -40,6 +40,12 @@
   }
 
   &--checkbox {
+    @include hover-focus {
+      .custom-toggle__icon {
+        outline: 2px solid $color-transparent;
+      }
+    }
+
     .custom-toggle__icon {
       position: absolute;
       top: 0;

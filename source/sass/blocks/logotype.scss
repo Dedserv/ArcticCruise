@@ -15,6 +15,7 @@
 .logotype__link {
   transition: $trans-default;
   color: inherit;
+  display: block;
 
   @include hover {
     opacity: 0.8;

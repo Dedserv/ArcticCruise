@@ -63,7 +63,13 @@
   width: 100%;
   height: 100%;
 
+  @include vp-767 {
+    min-height: 386px;
+  }
+
   @include hover-focus {
+    outline: none;
+
     h3 {
       opacity: 0;
     }
@@ -71,13 +77,25 @@
     .catalog__card-inner {
       opacity: 1;
       background-color: $color-tangaroa;
+
+      h3 {
+        opacity: 1;
+      }
     }
   }
 
   &:focus-within {
+    h3 {
+      opacity: 0;
+    }
+
     .catalog__card-inner {
       opacity: 1;
       background-color: $color-tangaroa;
+
+      h3 {
+        opacity: 1;
+      }
     }
   }
 

@@ -850,6 +850,10 @@ button,
   color: #f9fbfd;
 }
 
+.custom-toggle--checkbox.focus-visible:focus .custom-toggle__icon {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
   top: 0;
@@ -1249,6 +1253,7 @@ button,
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   color: inherit;
+  display: block;
 }
 
 .logotype__link:active {
@@ -1536,6 +1541,10 @@ button,
   height: 100%;
 }
 
+.catalog__card.focus-visible:focus {
+  outline: none;
+}
+
 .catalog__card.focus-visible:focus h3 {
   opacity: 0;
 }
@@ -1545,9 +1554,21 @@ button,
   background-color: #011c40;
 }
 
+.catalog__card.focus-visible:focus .catalog__card-inner h3 {
+  opacity: 1;
+}
+
+.catalog__card:focus-within h3 {
+  opacity: 0;
+}
+
 .catalog__card:focus-within .catalog__card-inner {
   opacity: 1;
   background-color: #011c40;
+}
+
+.catalog__card:focus-within .catalog__card-inner h3 {
+  opacity: 1;
 }
 
 .catalog__card img {
@@ -2461,6 +2482,10 @@ button,
     margin: 0 10px;
   }
 
+  .catalog__card {
+    min-height: 386px;
+  }
+
   .catalog__card img {
     max-width: 500px;
     min-height: 386px;
@@ -2663,6 +2688,10 @@ button,
     opacity: 0.8;
   }
 
+  .custom-toggle--checkbox:hover:not(.focus-visible) .custom-toggle__icon {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -2679,6 +2708,10 @@ button,
     opacity: 0.8;
   }
 
+  .catalog__card:hover:not(.focus-visible) {
+    outline: none;
+  }
+
   .catalog__card:hover:not(.focus-visible) h3 {
     opacity: 0;
   }
@@ -2686,6 +2719,10 @@ button,
   .catalog__card:hover:not(.focus-visible) .catalog__card-inner {
     opacity: 1;
     background-color: #011c40;
+  }
+
+  .catalog__card:hover:not(.focus-visible) .catalog__card-inner h3 {
+    opacity: 1;
   }
 
   .form__input input:hover:not(.focus-visible) {
