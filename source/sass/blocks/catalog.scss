@@ -38,7 +38,7 @@
 
 .catalog__card-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 23%));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 23%));
   grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   grid-gap: 30px;
@@ -46,11 +46,11 @@
   justify-content: center;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(auto, 32%));
   }
 
   @include vp-767 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 360px));
     margin: 0 10px;
   }
 }
@@ -58,13 +58,16 @@
 .catalog__card {
   position: relative;
   color: $color-alice-blue;
-  justify-self: center;
-  max-width: 440px;
   width: 100%;
   height: 100%;
 
+  @include vp-1023 {
+    min-width: 309px;
+    max-height: 386px;
+  }
+
   @include vp-767 {
-    min-height: 386px;
+    min-width: 270px;
   }
 
   @include hover-focus {
@@ -107,12 +110,12 @@
     left: 0;
     right: 0;
     background-color: $color-nepal;
-    width: 100%;
-    height: 100%;
+    object-fit: contain;
 
     @include vp-767 {
-      max-width: 500px;
-      min-height: 386px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -139,6 +142,7 @@
 .catalog__card-inner {
   display: flex;
   flex-direction: column;
+  overflow: auto;
   opacity: 0;
   padding: 25px 25px 35px;
   transition: $trans-600 background-color, opacity 0.4s;
@@ -150,7 +154,6 @@
   }
 
   @include vp-767 {
-    width: 100%;
     padding: 25px 25px 35px;
   }
 

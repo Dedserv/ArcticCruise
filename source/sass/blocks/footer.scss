@@ -20,15 +20,9 @@
 
 .footer__logotype-img {
   display: block;
-  margin-right: 40px;
-
-  @include vp-1023 {
-    margin-right: 25px;
-  }
 
   @include vp-767 {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -44,14 +38,22 @@
 }
 
 .footer__navigation-list {
+  margin-left: 40px;
+
+  @include vp-767 {
+    margin-left: 20px;
+  }
+
   @include vp-1023 {
     min-width: 460px;
+    margin-left: 25px;
     align-self: flex-start;
   }
 
   @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
+    margin: 0;
     margin-bottom: 16px;
     min-width: 300px;
   }
@@ -86,11 +88,10 @@
   align-self: flex-start;
   padding: 0;
   margin: 0;
-  margin-top: 6px;
   margin-left: auto;
 
   @include vp-1023 {
-    min-width: 100px;
+    min-width: 90px;
   }
 
   @include vp-767 {

@@ -36,7 +36,9 @@
       margin-top: 0;
       padding: 0;
       z-index: 2;
-      height: 100vh;
+      min-height: 100vh;
+      overflow: auto;
+      height: 100%;
       width: 100%;
       max-width: 285px;
       display: flex;

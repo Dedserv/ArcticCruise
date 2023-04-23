@@ -20,9 +20,14 @@
 }
 
 .contacts__inner {
+  flex: 1 1;
   color: $color-tangaroa;
-  margin-left: auto;
+  margin-left: 100px;
   max-width: 500px;
+
+  @include vp-1023 {
+    margin-left: 30px;
+  }
 
   @include vp-767 {
     max-width: none;
@@ -60,7 +65,7 @@
   }
 
   a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     transition: $trans-default opacity;
 
@@ -96,5 +101,7 @@
 }
 
 .contacts__icon {
+  flex-shrink: 0;
+  display: block;
   margin-right: 10px;
 }

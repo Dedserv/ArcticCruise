@@ -42,10 +42,6 @@
     margin-top: 0;
   }
 
-  br {
-    display: none;
-  }
-
   h1 {
     margin: 0;
     margin-bottom: 14px;
@@ -65,10 +61,6 @@
       margin-bottom: 14px;
       font-size: 36px;
       line-height: 45px;
-
-      br {
-        display: block;
-      }
     }
   }
 
@@ -87,11 +79,8 @@
     }
 
     @include vp-767 {
+      margin-right: 80px;
       font-size: 16px;
-
-      br {
-        display: block;
-      }
     }
   }
 }

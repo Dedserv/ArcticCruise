@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     const form = new Form();
-    window.form = form;
     form.init();
+    window.form = form;
   });
 });
 

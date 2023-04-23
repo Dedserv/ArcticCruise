@@ -1,8 +1,11 @@
 .map {
   max-height: 306px;
-  width: 80%;
+  max-width: 560px;
+  width: 100%;
+  flex: 1 1;
 
   @include vp-1023 {
+    max-width: 380px;
     max-height: 335px;
   }
 
@@ -16,19 +19,17 @@
 
 .map__content {
   border: 0;
-  margin-right: 20px;
-  width: 80%;
-  min-width: 560px;
+  max-width: 560px;
+  width: 100%;
+  min-width: 400px;
 
   @include vp-1023 {
-    margin-right: 30px;
     width: 90%;
     min-width: 324px;
     height: 335px;
   }
 
   @include vp-767 {
-    margin: 0;
     height: 316px;
     width: 100%;
     min-width: 290px;

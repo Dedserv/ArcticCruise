@@ -22,6 +22,9 @@
     }
 
     @include vp-767 {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
       text-align: center;
       margin: 0 auto;
     }
@@ -33,6 +36,15 @@
 
   @include vp-767 {
     flex-wrap: wrap;
+  }
+}
+
+.about__img {
+  @include vp-767 {
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -58,21 +70,14 @@
     font-size: 28px;
     line-height: 42px;
 
-    br {
-      display: none;
-    }
-
     @include vp-1023 {
-      br {
-        display: block;
-      }
-
       margin-bottom: 18px;
       font-size: 26px;
       line-height: 36px;
     }
 
     @include vp-767 {
+      margin-right: 30px;
       margin-bottom: 12px;
       font-size: 24px;
     }
@@ -82,21 +87,7 @@
     margin: 0;
     margin-bottom: 6px;
 
-    br {
-      display: none;
-    }
-
-    @include vp-1023 {
-      br {
-        display: block;
-      }
-    }
-
     @include vp-767 {
-      br {
-        display: none;
-      }
-
       &:last-child {
         margin-bottom: 44px;
       }
