@@ -5,6 +5,7 @@ export class Burger {
   constructor() {
     this._header = document.querySelector('[data-header]');
     this._burger = document.querySelector('[data-burger]');
+    // this._main = document.querySelector('main');
     this._scrollLock = new ScrollLock();
     this._focusLock = new FocusLock();
     this._isMenuOpen = false;

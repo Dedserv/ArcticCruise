@@ -60,10 +60,11 @@
   color: $color-alice-blue;
   width: 100%;
   height: 100%;
+  min-width: 260px;
+  max-height: 396px;
 
   @include vp-1023 {
     min-width: 309px;
-    max-height: 386px;
   }
 
   @include vp-767 {
@@ -110,7 +111,9 @@
     left: 0;
     right: 0;
     background-color: $color-nepal;
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 
     @include vp-767 {
       object-fit: cover;

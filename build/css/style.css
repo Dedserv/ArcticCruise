@@ -1539,6 +1539,8 @@ button,
   color: #f9fbfd;
   width: 100%;
   height: 100%;
+  min-width: 260px;
+  max-height: 396px;
 }
 
 .catalog__card.focus-visible:focus {
@@ -1579,8 +1581,10 @@ button,
   left: 0;
   right: 0;
   background-color: #93abbe;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .catalog__card h3 {
@@ -2121,7 +2125,6 @@ button,
 
   .catalog__card {
     min-width: 309px;
-    max-height: 386px;
   }
 
   .catalog__card h3 {
